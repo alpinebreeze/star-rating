@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import EmptyStar from "./EmptyStar";
 import FullStar from "./FullStar";
+import styles from "./RatableStar.module.css";
 
 export interface Props {
     width: number;
@@ -12,9 +13,8 @@ const RatableStar: FC<Props> = ({ width, value }) => {
 
     return (
         <div
+            className={styles.ratableStar}
             style={{
-                position: "relative",
-                display: "inline-block",
                 width: `${width}px`,
             }}
         >
@@ -28,11 +28,9 @@ const RatableStar: FC<Props> = ({ width, value }) => {
                     />
                     {fullStarValue > 0 && (
                         <div
+                            className={styles.partialStar}
                             style={{
-                                position: "absolute",
-                                top: "0",
                                 width: `${fullStarValue}%`,
-                                overflow: "hidden",
                             }}
                         >
                             <FullStar

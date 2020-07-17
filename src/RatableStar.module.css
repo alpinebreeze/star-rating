@@ -1,0 +1,10 @@
+.ratableStar {
+    position: relative;
+    display: inline-block;
+}
+
+.partialStar {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}

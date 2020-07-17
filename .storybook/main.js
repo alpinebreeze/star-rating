@@ -1,16 +1,35 @@
 module.exports = {
     stories: ['../src/**/*.stories.tsx'],
-    webpackFinal: async config => {
-        config.module.rules.push({
-            test: /\.(ts|tsx)$/,
-            use: [
-                {
-                    loader: require.resolve('ts-loader'),
-                },
-            ],
-        });
-        config.resolve.extensions.push('.ts', '.tsx');
-        return config;
-    },
     addons: ['@storybook/addon-knobs/register'],
+    webpackFinal: async config => {
+        config.resolve.extensions.push('.ts', '.tsx');
+        return {
+            ...config,
+            module: {
+                ...config.module,
+                rules: [
+                    {
+                        test: /\.(ts|tsx)$/,
+                        use: [
+                            {
+                                loader: require.resolve('ts-loader'),
+                            },
+                        ],
+                    },
+                    {
+                        test: /\.css$/i,
+                        use: [
+                            'style-loader',
+                            {
+                                loader: 'css-loader',
+                                options: {
+                                    modules: true,
+                                },
+                            },
+                        ],
+                    },
+                ]
+            }
+        };
+    },
 };

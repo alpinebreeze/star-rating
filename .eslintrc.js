@@ -24,7 +24,10 @@ module.exports = {
                 'endOfLine': 'auto'
             },
         ],
-        'react/prop-types': "off"
+        'react/prop-types': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+
     },
     settings: {
         react: {
