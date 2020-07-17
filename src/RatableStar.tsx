@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import EmptyStar from "./EmptyStar";
 import FullStar from "./FullStar";
 
@@ -7,10 +7,8 @@ export interface Props {
     value: number;
 }
 
-export default function RatableStar(props: Props): JSX.Element {
-    const { width, value } = props;
-    const fullStarValue =
-        props.value <= 0 ? 0 : props.value >= 1 ? 100 : value * 100;
+const RatableStar: FC<Props> = ({ width, value }) => {
+    const fullStarValue = value <= 0 ? 0 : value >= 1 ? 100 : value * 100;
 
     return (
         <div
@@ -57,4 +55,6 @@ export default function RatableStar(props: Props): JSX.Element {
             )}
         </div>
     );
-}
+};
+
+export default RatableStar;
