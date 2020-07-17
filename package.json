@@ -1,0 +1,32 @@
+{
+  "name": "star-rating",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "storybook": "start-storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.10.5",
+    "@storybook/addon-knobs": "5.3.19",
+    "@storybook/react": "5.3.19",
+    "@types/react": "16.9.43",
+    "@typescript-eslint/eslint-plugin": "3.6.1",
+    "@typescript-eslint/parser": "3.6.1",
+    "babel-loader": "8.1.0",
+    "eslint": "7.4.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-react": "7.20.3",
+    "eslint-plugin-react-hooks": "4.0.8",
+    "prettier": "2.0.5",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "ts-loader": "8.0.1",
+    "typescript": "3.9.7"
+  }
+}
